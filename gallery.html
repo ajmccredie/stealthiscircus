@@ -28,19 +28,94 @@
   </div>
 </header>
 
-<!-- Example Page Headings -->
-<section style="padding:3rem 2rem;">
-  <h1 style="font-family:'Cinzel Decorative',serif; color:#C79C43;">Bespoke Welding & Fabrication</h1>
-  <h2 style="color:#F9E4B7;">Forged for the Circus. Built for the Spectacle.</h2>
-  <p>Custom metalwork for performers, installations, and dreamers.</p>
-</section>
+<main class="gallery-background">
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <!-- Repeatable Thumbnails -->
+      <div class="thumb" data-title="Image 1" data-img="images/image1.jpg" data-description="Equipment: XXX<br>Information: Custom rigging frame for aerial act.">
+        <img src="images/image1.jpg" alt="Image 1" loading="lazy" />
+        <div class="overlay"><p>Image 1</p></div>
+      </div>
+      <div class="thumb" data-title="Image 2" data-img="images/image2.jpg" data-description="Equipment: XXX<br>Information: Stainless steel prop fabrication.">
+        <img src="images/image2.jpg" alt="Image 2" loading="lazy" />
+        <div class="overlay"><p>Image 2</p></div>
+      </div>
+      <div class="thumb" data-title="Image 3" data-img="images/image3.jpg" data-description="Equipment: XXX<br>Information: Decorative circus archway.">
+        <img src="images/image3.jpg" alt="Image 3" loading="lazy" />
+        <div class="overlay"><p>Image 3</p></div>
+      </div>
+      <div class="thumb" data-title="Image 4" data-img="images/image4.jpg" data-description="Equipment: XXX<br>Information: Hand-finished sculpture detail.">
+        <img src="images/image4.jpg" alt="Image 4" loading="lazy" />
+        <div class="overlay"><p>Image 4</p></div>
+      </div>
+      <div class="thumb" data-title="Image 5" data-img="images/image5.jpg" data-description="Equipment: XXX<br>Information: High-strength rig base.">
+        <img src="images/image5.jpg" alt="Image 5" loading="lazy" />
+        <div class="overlay"><p>Image 5</p></div>
+      </div>
+      <div class="thumb" data-title="Image 6" data-img="images/image6.jpg" data-description="Equipment: XXX<br>Information: Polished aluminum structure.">
+        <img src="images/image6.jpg" alt="Image 6" loading="lazy" />
+        <div class="overlay"><p>Image 6</p></div>
+      </div>
+      <div class="thumb" data-title="Image 7" data-img="images/image7.jpg" data-description="Equipment: XXX <br>Information: Custom signage for tent entry.">
+        <img src="images/image7.jpg" alt="Image 7" loading="lazy" />
+        <div class="overlay"><p>Image 7</p></div>
+      </div>
+      <div class="thumb" data-title="Image 8" data-img="images/image8.jpg" data-description="Equipment: XXX<br>Information: Surface finishing for performance stage.">
+        <img src="images/image8.jpg" alt="Image 8" loading="lazy" />
+        <div class="overlay"><p>Image 8</p></div>
+      </div>
+      <div class="thumb" data-title="Image 9" data-img="images/image9.jpg" data-description="Equipment: XXX<br>Information: Precision joints for load-bearing beams.">
+        <img src="images/image9.jpg" alt="Image 9" loading="lazy" />
+        <div class="overlay"><p>Image 9</p></div>
+      </div>
+      <div class="thumb" data-title="Image 10" data-img="images/image10.jpg" data-description="Equipment: XXX<br>Information: Aerial hoop mounting bracket.">
+        <img src="images/image10.jpg" alt="Image 10" loading="lazy" />
+        <div class="overlay"><p>Image 10</p></div>
+      </div>
+      <div class="thumb" data-title="Image 11" data-img="images/image11.jpg" data-description="Equipment: XXX<br>Information: Artistic prop cutouts.">
+        <img src="images/image11.jpg" alt="Image 11" loading="lazy" />
+        <div class="overlay"><p>Image 11</p></div>
+      </div>
+      <div class="thumb" data-title="Image 12" data-img="images/image12.jpg" data-description="Equipment: XXX<br>Information: Fine polishing for mirror finish.">
+        <img src="images/image12.jpg" alt="Image 12" loading="lazy" />
+        <div class="overlay"><p>Image 12</p></div>
+      </div>
+      <div class="thumb" data-title="Image 13" data-img="images/image13.jpg" data-description="Equipment: XXX<br>Information: Frame for circus performance apparatus.">
+        <img src="images/image13.jpg" alt="Image 13" loading="lazy" />
+        <div class="overlay"><p>Image 13</p></div>
+      </div>
+      <div class="thumb" data-title="Image 14" data-img="images/image14.jpg" data-description="Equipment: XXX<br>Information: Sculptural steel balance pole.">
+        <img src="images/image14.jpg" alt="Image 14" loading="lazy" />
+        <div class="overlay"><p>Image 14</p></div>
+      </div>
+      <div class="thumb" data-title="Image 15" data-img="images/image15.jpg" data-description="Equipment: XXX<br>Information: Hand-cut logo plate.">
+        <img src="images/image15.jpg" alt="Image 15" loading="lazy" />
+        <div class="overlay"><p>Image 15</p></div>
+      </div>
+    </div>
+  </section>
+</main>
 
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
+<footer class="site-footer">
+  <p>&copy; 2025 StealThisCircus. All rights reserved.</p>
+  <p>
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+  </p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="image-modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-modal">&times;</span>
+    <img id="modal-img" src="" alt="Expanded Image" />
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+  </div>
+</div>
+
+<script src="js/scripts.js"></script>
+
 </body>
 </html>
