@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Steal This Circus</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+<body>
+<header>
+  <div class="navbar">
+    <a href="index.html" class="logo">STEAL THIS CIRCUS</a>
+
+    <nav>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Example Page Headings -->
+<section style="padding:3rem 2rem;">
+  <h1 style="font-family:'Cinzel Decorative',serif; color:#C79C43;">Bespoke Welding & Fabrication</h1>
+  <h2 style="color:#F9E4B7;">Forged for the Circus. Built for the Spectacle.</h2>
+  <p>Custom metalwork for performers, installations, and dreamers.</p>
+</section>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+</body>
+</html>
