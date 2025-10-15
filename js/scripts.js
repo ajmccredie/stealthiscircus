@@ -1,3 +1,17 @@
+// ---------- PAGE LOADER ----------
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  if (loader) {
+    loader.style.transition = 'opacity 0.8s ease';
+    loader.style.opacity = '0';
+    // hide after fade completes
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 800);
+  }
+});
+
+
 // ---------- NAVBAR TOGGLE ----------
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -8,6 +22,7 @@ if (hamburger && navLinks) {
   });
 }
 
+
 // ---------- GALLERY MODAL ----------
 const thumbs = document.querySelectorAll('.thumb');
 const modal = document.getElementById('image-modal');
@@ -16,24 +31,30 @@ const modalTitle = document.getElementById('modal-title');
 const modalDesc = document.getElementById('modal-description');
 const closeBtn = document.getElementById('close-modal');
 
-if (thumbs.length && modal && modalImg && closeBtn) {
+if (thumbs.length) {
   thumbs.forEach(thumb => {
     thumb.addEventListener('click', () => {
       modal.style.display = 'block';
       modalImg.src = thumb.dataset.img;
       modalTitle.textContent = thumb.dataset.title;
       modalDesc.innerHTML = thumb.dataset.description;
+      document.body.style.overflow = 'hidden';
     });
   });
 
   closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
+    document.body.style.overflow = '';
   });
 
   window.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none';
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
   });
 }
+
 
 // ---------- HERO SLIDESHOW ----------
 const heroImage = document.getElementById('heroImage');
@@ -49,16 +70,16 @@ if (heroImage) {
     'images/hero7.jpg'
   ];
 
-  let currentIndex = 0;
-  const displayDuration = 4000; // visible time (ms)
-  const pauseDuration = 1000;   // pause between transitions (ms)
+  let currentIndex = 1; // start sequence at second image
+  const displayDuration = 4000; // visible
+  const transitionDuration = 1000; // fade + shrink time
 
   function showNextImage() {
-    // Fade and shrink out current
-    heroImage.classList.remove('active');
-    heroImage.style.transform = 'translate(-50%, -50%) scale(0.1)'; // reset scale
+    // Fade/scale out current
+    heroImage.style.transition = `opacity ${transitionDuration}ms ease, transform ${transitionDuration}ms ease`;
+    heroImage.style.opacity = 0;
+    heroImage.style.transform = 'translate(-50%, -50%) scale(0.1)';
 
-    // Wait for fade/scale-out, then swap image
     setTimeout(() => {
       const nextImage = new Image();
       nextImage.src = heroImages[currentIndex];
@@ -66,23 +87,30 @@ if (heroImage) {
       nextImage.onload = () => {
         heroImage.src = nextImage.src;
 
-        // Force reflow so CSS sees transform reset before adding class
+        // Force reflow to reset animation
         void heroImage.offsetWidth;
 
-        heroImage.classList.add('active');
-        heroImage.style.transform = ''; // let CSS handle scaling again
+        heroImage.style.transition = `opacity ${transitionDuration}ms ease, transform ${transitionDuration}ms ease`;
+        heroImage.style.opacity = 1;
+        heroImage.style.transform = 'translate(-50%, -50%) scale(1)';
 
-        // Schedule next transition
-        setTimeout(() => {
-          currentIndex = (currentIndex + 1) % heroImages.length;
-          showNextImage();
-        }, displayDuration);
+        // Move to next, looping back to start when needed
+        currentIndex = (currentIndex + 1) % heroImages.length;
+
+        // Schedule next change
+        setTimeout(showNextImage, displayDuration);
       };
-    }, pauseDuration);
+    }, transitionDuration);
   }
 
-  // Preload first image, then start sequence
+  // Preload first image and show it once at start
   const firstImage = new Image();
   firstImage.src = heroImages[0];
-  firstImage.onload = () => showNextImage();
+  firstImage.onload = () => {
+    heroImage.src = firstImage.src;
+    heroImage.style.opacity = 1;
+    heroImage.style.transform = 'translate(-50%, -50%) scale(1)';
+    // Start the slideshow after the first display period
+    setTimeout(showNextImage, displayDuration);
+  };
 }
