@@ -538,3 +538,57 @@ header {
   background: var(--yellow);
   color: var(--black);
 }
+
+/* ===== THANK YOU MODAL ===== */
+.thankyou-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.thankyou-content {
+  background: var(--offwhite);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid var(--pink);
+}
+
+.thankyou-content h3 {
+  font-family: 'Black Ops One', sans-serif;
+  color: var(--pink);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.thankyou-content p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.thankyou-content .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 1.5rem;
+  color: var(--pink);
+  cursor: pointer;
+}
+
+.thankyou-content .close-btn:hover {
+  color: var(--yellow);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

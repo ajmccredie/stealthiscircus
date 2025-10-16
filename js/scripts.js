@@ -113,3 +113,46 @@ if (heroImage) {
     setInterval(transitionToNext, displayDuration + transitionDuration);
   };
 }
+
+
+// ---------- CONTACT FORM THANK YOU POPUP ----------
+const contactForm = document.getElementById('contactForm');
+const thankYouModal = document.getElementById('thankYouModal');
+const closeThankYou = document.getElementById('closeThankYou');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        thankYouModal.style.display = 'flex'; // ✅ show modal
+        contactForm.reset();
+      } else {
+        alert('Oops! Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      alert('Error sending message. Please check your connection.');
+    }
+  });
+}
+
+if (closeThankYou) {
+  closeThankYou.addEventListener('click', () => {
+    thankYouModal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === thankYouModal) {
+      thankYouModal.style.display = 'none';
+    }
+  });
+}
