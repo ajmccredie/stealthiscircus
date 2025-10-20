@@ -1,72 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Steal This Circus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Staatliches&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Staatliches&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
-<body>
-<!-- ===== HEADER / NAV ===== -->
-<header>
-  <div class="navbar">
-    <div class="logo-container">
-      <img src="images/stc_logo.png" alt="Steal This Circus Logo" class="logo-img" />
-      <a href="index.html" class="logo-text">STEAL THIS CIRCUS</a>
-    </div>
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header>
+      <div class="navbar">
+        <div class="logo-container">
+          <img
+            src="images/stc_logo.png"
+            alt="Steal This Circus Logo"
+            class="logo-img"
+          />
+          <a href="index.html" class="logo-text">STEAL THIS CIRCUS</a>
+        </div>
 
-    <nav>
-      <div class="hamburger" id="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <nav>
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
       </div>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+    </header>
+
+    <!-- ===== WARNING STRIP ===== -->
+    <section class="warning-strip">
+      <div class="warning-overlay">
+        <p class="warning-text">Bespoke Circus Prop Fabrication</p>
+        <a href="contact.html" class="contact-btn">Contact</a>
       </div>
-    </nav>
-  </div>
-</header>
+    </section>
 
-<!-- ===== WARNING STRIP ===== -->
-<section class="warning-strip">
-  <div class="warning-overlay">
-    <p class="warning-text">Bespoke Circus Prop Fabrication</p>
-    <a href="contact.html" class="contact-btn">Contact</a>
-  </div>
-</section>
-
-<!-- ===== GALLERY SECTIONS ===== -->
+    <!-- ===== GALLERY SECTIONS ===== -->
     <main class="gallery-background">
       <section id="performance" class="gallery dark">
         <h2>Performance</h2>
         <div class="gallery-grid">
-          <div class="thumb" data-title="Image 1" data-img="images/aerial_net.jpg" data-description="Aerial net, good for catching mermaid's and making aerialists cry"<br>Aerial net and counter weight system for performance
-            <img src="images/aerial_net.JPG" alt="Image 1" loading="lazy" />
-            <div class="overlay"><p>Image 1</p></div>
+          <div
+            class="thumb"
+            data-title="Image 1"
+            data-img="images/aerial_net.jpg"
+            data-description="Aerial net: good for catching mermaids, and making aerialists cry
+            <br>Aerial net and counter weight system for performance"
+          >
+            <img src="images/aerial_net.jpg" alt="Aerial net" loading="lazy" />
+            <div class="overlay"><p>Aerial net</p></div>
           </div>
-          <div class="thumb" data-title="flying_trapeze_net.JPG" data-img="images/flying_trapeze_net.JPG" data-description="Equipment:<br>Safety net for flying trapeze act."><br> Safety net for flying act
-
-            <img src="images/lying_trapeze_net.JPG" alt="flying_trapeze_net.JPG" loading="lazy" />
-            <div class="overlay"><p>Image 2</p></div>
+          <div
+            class="thumb"
+            data-title="flying_trapeze_net.jpg"
+            data-img="images/flying_trapeze_net.jpg"
+            data-description="Equipment:<br>Safety net for flying trapeze act."
+          >
+            <img
+              src="images/flying_trapeze_net.jpg"
+              alt="flying_trapeze_net.jpg"
+              loading="lazy"
+            />
+            <div class="overlay"><p>Safety nets</p></div>
           </div>
-          <div class="thumb" data-title="Doublewide_fly.JPG" data-img="images/Doublewide_fly.jpg" data-description="Double wide flying trapeze rig"><br>Double wide flying trapeze rig
-            <img src="images/Doublewide_fly.JPG" alt="Doublewide_fly.JPG" loading="lazy" />
-            <div class="overlay"><p>Image 3</p></div>
+          <div
+            class="thumb"
+            data-title="Doublewide_fly.jpg"
+            data-img="images/Doublewide_fly.jpg"
+            data-description="Double wide flying trapeze rig"
+          >
+            <img
+              src="images/Doublewide_fly.jpg"
+              alt="Double-wide fly bars"
+              loading="lazy"
+            />
+            <div class="overlay"><p>Double-wide fly</p></div>
           </div>
-          <div class="thumb" data-title="Image 4" data-img="images/image4.jpg" data-description="Aerial cradle for casting act or Petite Volant."><br>Aerial cradle for casting act or Petite Volant
-            <img src="images/image1.jpg" alt="Image 4" loading="lazy" />
-            <div class="overlay"><p>Image 4</p></div>
+          <div
+            class="thumb"
+            data-title="Aerial cradle"
+            data-img="images/image1.jpg"
+            data-description="Aerial cradle for casting act or Petite Volant."
+          >
+            <img src="images/image1.jpg" alt="Aerial cradle" loading="lazy" />
+            <div class="overlay"><p>Aerial cradle</p></div>
           </div>
-          <div class="thumb" data-title="pirates" data-img="images/pirates.jpg" data-description="Equipment: Rig Base<br>Information: High-strength base for aerial performance.">
-            <img src="images/Pirates.JPG" alt="Pirates" loading="lazy" />
-            <div class="overlay"><p>Image 5</p></div>
+          <div
+            class="thumb"
+            data-title="High strength aerial base"
+            data-img="images/Pirates.jpg"
+            data-description="Equipment: Rig Base<br>Information: High-strength base for aerial performance."
+          >
+            <img src="images/Pirates.jpg" alt="Pirates" loading="lazy" />
+            <div class="overlay"><p>High strength aerial base</p></div>
           </div>
         </div>
         <div class="section-contact">
@@ -77,24 +120,58 @@
       <section id="props" class="gallery">
         <h2>Fabrication for performance</h2>
         <div class="gallery-grid">
-          <div class="thumb" data-title="Aerial spreader plate" data-img="images/swift.jpg" data-description="10mm steel spreader plate for aerial straps or harness work, custom cut swift design">
-            <img src="images/swift.PNG" alt="swift" loading="lazy" />
+          <div
+            class="thumb"
+            data-title="Aerial spreader plate"
+            data-img="images/swift.png"
+            data-description="10mm steel spreader plate for aerial straps or harness work, custom cut swift design"
+          >
+            <img src="images/swift.png" alt="swift" loading="lazy" />
             <div class="overlay"><p>Straps/Harness spreader plate</p></div>
           </div>
-          <div class="thumb" data-title="Swinging trapeze bar"data-img="Swingingtrap.jpg" data-description="Weighted swinging trapeze bar, dyneema core, cotton braided rope, finished with leather cover.">
-            <img src="images/Swingingtrap.PNG" alt="Swingingtrap loading="lazy" />
+          <div
+            class="thumb"
+            data-title="Swinging trapeze bar"
+            data-img="images/Swingingtrap.png"
+            data-description="Weighted swinging trapeze bar, dyneema core, cotton braided rope, finished with leather cover."
+          >
+            <img src="images/Swingingtrap.png" alt="Swingingtrap loading="lazy"
+            />
             <div class="overlay"><p>Swinging trapeze bar</p></div>
           </div>
-          <div class="thumb" data-title="Frame for swinging act" data-img="images/Swingboom.PNG" data-description="Steel tube frame and down guy with mounted swinging bearings for swinging trapeze or any dynamic swinging act ">
-            <img src="images/Swingboom.PNG" alt="Swingboom.PNG" loading="lazy" />
-            <div class="overlay"><p>Aerial frame for swinging act</div>
+          <div
+            class="thumb"
+            data-title="Frame for swinging act"
+            data-img="images/Swingboom.png"
+            data-description="Steel tube frame and down guy with mounted swinging bearings for swinging trapeze or any dynamic swinging act "
+          >
+            <img
+              src="images/Swingboom.png"
+              alt="Swingboom.PNG"
+              loading="lazy"
+            />
+            <div class="overlay"><p>Aerial frame for swinging act</p></div>
           </div>
-          <div class="thumb" data-title="" data-img="images/tigflybar.jpeg" data-description="Tig welded stainless steel trapeze bar">
+          <div
+            class="thumb"
+            data-title=""
+            data-img="images/tigflybar.jpeg"
+            data-description="Tig welded stainless steel trapeze bar"
+          >
             <img src="images/tigflybar.jpeg" alt="tigflybar" loading="lazy" />
             <div class="overlay"><p>Stainless steel trapeze bar</p></div>
           </div>
-          <div class="thumb" data-title="Double trapeze bar and collapsible frame" data-img="images/nivenbar.jpeg" data-description="Equipment: Hoop Bracket<br>Information: Aerial hoop mounting.">
-            <img src="images/nivenbar.jpeg" alt="Duo trapeze and frame" loading="lazy" />
+          <div
+            class="thumb"
+            data-title="Double trapeze bar and collapsible frame"
+            data-img="images/nivenbar.jpeg"
+            data-description="Equipment: Hoop Bracket<br>Information: Aerial hoop mounting."
+          >
+            <img
+              src="images/nivenbar.jpeg"
+              alt="Duo trapeze and frame"
+              loading="lazy"
+            />
             <div class="overlay"><p>Duo trapeze and frame</p></div>
           </div>
         </div>
@@ -106,23 +183,52 @@
       <section id="fabrication" class="gallery dark">
         <h2>school props</h2>
         <div class="gallery-grid">
-          <div class="thumb" data-title="Twin Trapeze" data-img="images/Twintrapeze.PNG" data-description="Side by side trapeze, cotton rope, hollow steel bar.">
-            <img src="images/twintrapeze.PNG" alt="Twintrapeze" loading="lazy" />
-            <div class="overlay"><p>Twintrapeze/p></div>
+          <div
+            class="thumb"
+            data-title="Twin Trapeze"
+            data-img="images/twintrapeze.png"
+            data-description="Side by side trapeze, cotton rope, hollow steel bar."
+          >
+            <img
+              src="images/twintrapeze.png"
+              alt="Twin trapeze"
+              loading="lazy"
+            />
+            <div class="overlay"><p>Twin trapeze</p></div>
           </div>
-          <div class="thumb" data-title="Image 12" data-img="images/image12.jpg" data-description="Equipment: Mirror Finish<br>Information: High-polish fabrication.">
+          <div
+            class="thumb"
+            data-title="Image 12"
+            data-img="images/image12.jpg"
+            data-description="Equipment: Mirror Finish<br>Information: High-polish fabrication."
+          >
             <img src="images/image3.jpg" alt="Image 12" loading="lazy" />
             <div class="overlay"><p>Image 12</p></div>
           </div>
-          <div class="thumb" data-title="Image 13" data-img="images/image13.jpg" data-description="Equipment: Performance Frame<br>Information: Custom support structure.">
+          <div
+            class="thumb"
+            data-title="Image 13"
+            data-img="images/image13.jpg"
+            data-description="Equipment: Performance Frame<br>Information: Custom support structure."
+          >
             <img src="images/image1.jpg" alt="Image 13" loading="lazy" />
             <div class="overlay"><p>Image 13</p></div>
           </div>
-          <div class="thumb" data-title="Image 14" data-img="images/image14.jpg" data-description="Equipment: Balance Pole<br>Information: Sculptural steel work.">
+          <div
+            class="thumb"
+            data-title="Image 14"
+            data-img="images/image14.jpg"
+            data-description="Equipment: Balance Pole<br>Information: Sculptural steel work."
+          >
             <img src="images/image2.jpg" alt="Image 14" loading="lazy" />
             <div class="overlay"><p>Image 14</p></div>
           </div>
-          <div class="thumb" data-title="Image 15" data-img="images/image15.jpg" data-description="Equipment: Logo Plate<br>Information: Hand-cut and finished branding plate.">
+          <div
+            class="thumb"
+            data-title="Image 15"
+            data-img="images/image15.jpg"
+            data-description="Equipment: Logo Plate<br>Information: Hand-cut and finished branding plate."
+          >
             <img src="images/image3.jpg" alt="Image 15" loading="lazy" />
             <div class="overlay"><p>Image 15</p></div>
           </div>
@@ -131,32 +237,41 @@
           <a href="contact.html">Contact</a>
         </div>
       </section>
-</main>
+    </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <img src="images/stc_logo.png" alt="Digital Flying Squirrels Logo" class="footer-squirrel">
-      <p>&copy; 2025 Steal This Circus</p>
-      <p class="socials">
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://digitalflyingsquirrels.co.uk" target="_blank">Digital Flying Squirrels</a>
-      </p>
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <img
+          src="images/stc_logo.png"
+          alt="Digital Flying Squirrels Logo"
+          class="footer-squirrel"
+        />
+        <p>&copy; 2025 Steal This Circus</p>
+        <p class="socials">
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://digitalflyingsquirrels.co.uk" target="_blank"
+            >Digital Flying Squirrels</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal" id="image-modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <img id="modal-img" src="" alt="Expanded Image" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
     </div>
-  </footer>
 
-<!-- MODAL -->
-<div class="modal" id="image-modal">
-  <div class="modal-content">
-    <span class="close-btn" id="close-modal">&times;</span>
-    <img id="modal-img" src="" alt="Expanded Image" />
-    <h3 id="modal-title"></h3>
-    <p id="modal-description"></p>
-  </div>
-</div>
-
-<script src="js/scripts.js"></script>
-
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
