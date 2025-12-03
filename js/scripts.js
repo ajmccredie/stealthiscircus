@@ -118,44 +118,45 @@ if (heroImage) {
 }
 
 
-// ---------- CONTACT FORM THANK YOU POPUP ----------
-const contactForm = document.getElementById('contactForm');
-const thankYouModal = document.getElementById('thankYouModal');
-const closeThankYou = document.getElementById('closeThankYou');
+// ---------- FORMSPREE THANK YOU MODAL ----------
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const thankYouModal = document.getElementById("thankYouModal");
+  const closeBtn = document.getElementById("closeThankYou");
 
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
+  if (!form || !thankYouModal || !closeBtn) return;
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(contactForm);
+    const data = new FormData(form);
 
-    try {
-      const response = await fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' },
-      });
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" }
+    });
 
-      if (response.ok) {
-        thankYouModal.style.display = 'flex'; // ✅ show modal
-        contactForm.reset();
-      } else {
-        alert('Oops! Something went wrong. Please try again later.');
-      }
-    } catch (error) {
-      alert('Error sending message. Please check your connection.');
+    if (response.ok) {
+      thankYouModal.style.display = "flex";  // ensures centered with flexbox
+      form.reset();
+      document.body.style.overflow = "hidden"; // prevent background scroll
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
     }
   });
-}
 
-if (closeThankYou) {
-  closeThankYou.addEventListener('click', () => {
-    thankYouModal.style.display = 'none';
+  // Close modal on X click
+  closeBtn.addEventListener("click", () => {
+    thankYouModal.style.display = "none";
+    document.body.style.overflow = "";
   });
 
-  window.addEventListener('click', (e) => {
+  // Close when clicking outside the popup
+  window.addEventListener("click", (e) => {
     if (e.target === thankYouModal) {
-      thankYouModal.style.display = 'none';
+      thankYouModal.style.display = "none";
+      document.body.style.overflow = "";
     }
   });
-}
+});
