@@ -62,7 +62,7 @@ const heroImage = document.getElementById('heroImage');
 if (heroImage) {
   const heroImages = [
     'images/hero1.jpg',
-    'images/hero2.jpg',
+    'images/hero2.png',
     'images/hero4.jpg',
     'images/hero5.png',
     'images/hero6.jpg',

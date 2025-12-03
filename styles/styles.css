@@ -115,6 +115,7 @@ header {
     var(--yellow) 20px
   );
   position: relative;
+  z-index: 50;
   text-align: center;
   overflow: hidden;
   padding: 1.2rem 0;
@@ -129,6 +130,7 @@ header {
   background-color: rgba(0, 0, 0, 0.7); /* translucent dark box */
   padding: 0.5rem 1rem;
   border-radius: 6px;
+  z-index: 60;
 }
 
 .warning-text {
@@ -197,10 +199,12 @@ header {
 .tent {
   position: relative;
   z-index: 1;
-  width: 600px;
-  max-width: 80vw;
-  opacity: 0.2;
+  width: 80vw;              
+  max-width: 900px;          
+  opacity: 0.22;
   animation: gentlePulse 8s infinite alternate;
+  object-fit: contain;
+  pointer-events: none;     
 }
 
 @keyframes gentlePulse {
@@ -250,12 +254,35 @@ header {
   }
 
   .tent {
-    width: 85vw;
+    width: 100%;
+    max-width: 100vw;        
+    opacity: 0.25;
+    margin-top: -1rem;       
+    display: block;
   }
 
   .hero-image {
     max-width: 95%;
     max-height: 80%;
+  }
+}
+
+/* ===== EXTRA TIGHT MOBILE LAYOUT FOR VERY NARROW SCREENS ===== */
+@media (max-width: 480px) {
+
+  .landing-container {
+    height: 70vh;          /* shorter hero area */
+    margin-top: -2.5rem;   /* pull upward noticeably */
+  }
+
+  .tent {
+    max-width: 100vw;       /* slightly smaller so it fits cleanly */
+    margin-top: -1.5rem;   /* pull tent upward */
+  }
+
+  .hero-image {
+    max-height: 70%;       /* prevents crowding */
+    margin-top: -0.8rem;   /* lifts hero image slightly */
   }
 }
 
