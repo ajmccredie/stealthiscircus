@@ -28,7 +28,7 @@ header {
   border-bottom: 3px solid var(--yellow);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 900;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -91,11 +91,17 @@ header {
     overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.4s ease;
     opacity: 0;
+    z-index: 950; /* always on top */
   }
 
   .nav-links.active {
     max-height: 300px;
     opacity: 1;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 960; /* sits above nav panel so it remains clickable */
   }
 
   .nav-links a {
